@@ -39,7 +39,7 @@ const HeroSection = () => {
   }, [currentSlide]);
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] flex items-stretch overflow-hidden">
+    <section id="home" className="relative h-screen min-h-[450px] flex items-stretch overflow-hidden">
       
       {/* Horizontally Scrolling Backgrounds */}
       <div 
@@ -64,11 +64,11 @@ const HeroSection = () => {
 
       {/* Left Content Pane with linear gradient overlay (pointer-events-none so we can swipe background) */}
       <div 
-        className="absolute inset-0 z-10 w-full flex flex-col justify-center px-[80px] py-[80px] pointer-events-none"
+        className="absolute inset-0 z-10 w-full flex flex-col justify-center px-[80px] py-[50px] pointer-events-none"
         style={{ background: "linear-gradient(to right, rgba(245, 240, 232, 1) 0%, rgba(245, 240, 232, 0.85) 35%, rgba(245, 240, 232, 0) 75%)" }}
       >
         <div className="pointer-events-auto w-fit">
-          <h1 className="font-serif font-bold text-[75px] leading-[1.15] text-[#1a3a2a] mb-6">
+          <h1 className="font-serif font-bold text-[75px] leading-[1.15] text-[#1F5E4E] mb-6">
             Discover the<br />
             Timeless <span className="text-gold">Heritage</span><br />
             Of Sri Lanka
@@ -89,7 +89,7 @@ const HeroSection = () => {
       </div>
 
       {/* Floating Site Card - Bottom Right */}
-      <div className="absolute bottom-[60px] right-[60px] z-20 bg-white rounded-[12px] py-4 px-6 flex items-center justify-between gap-10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] min-w-[340px] pointer-events-auto transition-all duration-300">
+      <div className="absolute bottom-[40px] right-[60px] z-20 bg-white rounded-[12px] py-4 px-6 flex items-center justify-between gap-10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] min-w-[340px] pointer-events-auto transition-all duration-300">
         <div>
           <div className="font-bold text-[1.1rem] text-[#1a3a2a]">{slides[currentSlide]?.title}</div>
           <div className="text-[0.85rem] text-[#7a7a6a] mt-0.5">{slides[currentSlide]?.location}</div>
@@ -100,7 +100,7 @@ const HeroSection = () => {
       </div>
 
       {/* Slide Dots - Centered under the Card */}
-      <div className="absolute bottom-[35px] right-[215px] z-20 flex items-center gap-1.5 pointer-events-auto">
+      <div className="absolute bottom-[20px] right-[215px] z-20 flex items-center gap-1.5 pointer-events-auto">
         {slides.map((_, index) => (
           <button 
             key={index}
@@ -113,10 +113,7 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-6 left-[80px] z-20 text-[0.75rem] font-bold text-[#1a3a2a]/60 tracking-[2px] uppercase flex items-center gap-2 pointer-events-none">
-        <span className="animate-bounce">←</span> Swipe or click dots to explore <span className="animate-bounce">→</span>
-      </div>
+      
     </section>
   );
 };

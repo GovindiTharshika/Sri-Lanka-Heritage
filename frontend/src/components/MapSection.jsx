@@ -21,7 +21,7 @@ const MapSection = () => {
         </div>
 
         {/* Main Map Area */}
-        <div className="relative w-full flex justify-center items-center mt-[-20px]">
+        <div className="relative w-full flex justify-start items-center mt-[-20px]">
           
           {/* Compass Image */}
           <div className="absolute left-[5%] top-[10%]">
