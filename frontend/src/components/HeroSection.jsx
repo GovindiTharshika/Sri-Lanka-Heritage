@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const HeroSection = () => {
-  const [activeSlide, setActiveSlide] = useState(0);
-
   return (
     <section id="home" className="relative h-screen min-h-[600px] flex items-stretch overflow-hidden">
       {/* Background Image */}
@@ -11,55 +9,52 @@ const HeroSection = () => {
         style={{ backgroundImage: "url('/images/galle fort.png')" }}
       ></div>
 
-      {/* Left Content Pane */}
-      <div className="relative z-10 w-full flex flex-col justify-center px-[60px] py-[80px]"
-           style={{ background: "linear-gradient(to right, rgba(230, 230, 225, 0.95) 0%, rgba(230, 230, 225, 0.85) 30%, rgba(230, 230, 225, 0) 70%)" }}>
-        
-        <h1 className="font-serif font-medium text-[70px] leading-[140%] tracking-[0.02em] text-[#1F5E4E] mb-[22px]">
-          Discover Sri Lanka's<br />
-          <span className="text-gold font-normal">Timeless Heritage</span>
+      {/* Left Content Pane with linear gradient overlay */}
+      <div 
+        className="relative z-10 w-full flex flex-col justify-center px-[80px] py-[80px]"
+        style={{ background: "linear-gradient(to right, rgba(245, 240, 232, 0.95) 0%, rgba(245, 240, 232, 0.8) 40%, rgba(245, 240, 232, 0) 80%)" }}
+      >
+        <h1 className="font-serif font-bold text-[75px] leading-[1.15] text-[#1a3a2a] mb-6">
+          Discover the<br />
+          Timeless <span className="text-gold">Heritage</span><br />
+          Of Sri Lanka
         </h1>
         
-        <p className="font-poppins font-light text-[20px] leading-[30px] text-[#222222] max-w-[794px] mb-[36px]">
-          Explore the rich history, ancient ruins, and cultural wonders of a nation 
-          where every stone tells a story spanning thousands of years.
+        <p className="font-sans text-[18px] leading-[1.6] text-text-dark max-w-[700px] mb-8 opacity-90">
+          Explore ancient kingdoms, sacred temples, archaeological wonders and 
+          forgotten civilizations through an immersive digital joutney across Sri Lanka
         </p>
         
-        <a href="#explore" className="inline-flex flex-row items-center pt-[7px] pb-[8px] pl-[26px] pr-[15px] gap-[20px] bg-[#1F5E4E] shadow-[0px_6px_16px_rgba(31,94,78,0.12)] text-white border-none rounded-lg text-[0.9rem] font-semibold cursor-pointer font-poppins no-underline transition-all duration-250 w-fit hover:bg-gold hover:text-deep-green hover:-translate-y-0.5">
-          Start Exploring
-          <div className="w-[22px] h-[22px] bg-white/20 rounded-full flex items-center justify-center text-[0.8rem]">
-            →
-          </div>
+        <a 
+          href="#contact-section" 
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#1F5E4E] hover:bg-gold text-white hover:text-deep-green font-semibold text-[0.95rem] rounded-[6px] transition-all duration-200 w-fit no-underline shadow-md"
+        >
+          <span>📞</span> Contact Us
         </a>
       </div>
 
       {/* Floating Site Card - Bottom Right */}
-      <div className="absolute bottom-10 right-10 z-10 bg-white rounded-xl py-4 px-5 flex items-center gap-5 shadow-[0_8px_32px_rgba(0,0,0,0.18)] min-w-[280px]">
-        <img src="/images/image 18.png" alt="Galle Fort" className="w-[60px] h-[60px] rounded-lg object-cover" />
-        <div className="flex-1">
-          <div className="font-bold text-[0.95rem] text-text-dark">Galle Dutch Fort</div>
-          <div className="text-[0.78rem] text-text-muted mt-0.5">Southern Province</div>
+      <div className="absolute bottom-[60px] right-[60px] z-10 bg-white rounded-[12px] py-4 px-6 flex items-center justify-between gap-10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] min-w-[340px]">
+        <div>
+          <div className="font-bold text-[1.1rem] text-[#1a3a2a]">Galle Fort</div>
+          <div className="text-[0.85rem] text-[#7a7a6a] mt-0.5">Southern Province</div>
         </div>
-        <a href="#" className="text-deep-green text-[0.82rem] font-semibold no-underline whitespace-nowrap flex items-center gap-1 transition-colors duration-200 hover:text-gold">
-          View <span>→</span>
+        <a href="#explore" className="text-[#1a3a2a] font-semibold text-[0.85rem] no-underline hover:text-gold flex items-center gap-1 transition-colors duration-200">
+          View Details <span className="text-[1.1rem]">&rarr;</span>
         </a>
       </div>
 
-      {/* Slide Dots */}
-      <div className="absolute bottom-[54px] left-1/2 -translate-x-1/2 z-10 flex items-center gap-1.5">
-        {[0, 1, 2, 3].map((index) => (
-          <button 
-            key={index}
-            onClick={() => setActiveSlide(index)}
-            className={`h-2 rounded-full transition-all duration-300 ${activeSlide === index ? 'bg-white w-[22px] rounded-md' : 'bg-white/50 w-2'}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+      {/* Slide Dots - Centered under the Card */}
+      <div className="absolute bottom-[35px] right-[215px] z-10 flex items-center gap-1.5">
+        <div className="w-[32px] h-[5px] rounded-full bg-white"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-white/60"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-white/60"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-white/60"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-white/60"></div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 text-[0.72rem] text-white/70 tracking-[2px] uppercase flex flex-col items-center gap-1">
-        <div className="w-px h-5 bg-white/50 mb-1"></div>
         Scroll
       </div>
     </section>
