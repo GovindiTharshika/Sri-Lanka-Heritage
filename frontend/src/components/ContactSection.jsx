@@ -2,93 +2,97 @@ import React from 'react';
 
 const ContactSection = () => {
   return (
-    <section className="bg-cream py-[90px] px-10 relative overflow-hidden" id="contact-section">
-      <img src="/images/half.png" className="absolute left-[10px] top-[10%] h-[90%] opacity-80 z-0 pointer-events-none" alt="" />
+    <section className="py-[80px] px-[40px] relative overflow-hidden" id="contact-section" style={{ backgroundColor: '#F8F6F1' }}>
+      <img src="/images/half.png" className="absolute left-0 top-0 h-full opacity-60 z-0 pointer-events-none object-contain object-left" alt="" />
       
-      <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 relative z-10">
+      <div className="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
         
         {/* Left Side */}
-        <div className="contact-left">
+        <div>
           <p className="text-gold text-[0.72rem] font-bold tracking-[3px] uppercase mb-3">CONTACT US</p>
-          <h2 className="font-serif text-[2.2rem] font-extrabold text-text-dark mb-4 leading-[1.2]">
-            Let's Preserve Sri Lanka's Heritage Together
+          <h2 className="font-serif text-[2rem] font-bold text-text-dark mb-4 leading-[1.25]">
+            Let's Preserve Sri Lanka's<br />Heritage Together
           </h2>
-          <p className="text-text-mid text-[0.9rem] leading-[1.6] mb-10 max-w-[90%]">
-            Have questions, research inquiries, partnership opportunities, or wish to
-            contribute to documenting Sri Lanka's historical treasures? We'd love to hear from you.
+          <p className="text-text-mid text-[0.88rem] leading-[1.65] mb-8 max-w-[85%]">
+            Have questions, research inquiries, partnership opportunities, or wish to contribute to documenting 
+            Sri Lanka's historical treasures? We'd love to hear from you.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[15px] mb-[50px]">
-            <div className="bg-white rounded-xl p-5 flex items-start gap-[15px] shadow-[0_4px_15px_rgba(0,0,0,0.03)]">
-              <div className="w-8 h-8 rounded-full bg-gold/10 text-deep-green flex items-center justify-center shrink-0 text-[1rem]">📍</div>
-              <div className="info-card-content">
-                <h5 className="text-deep-green text-[0.85rem] mb-1 font-bold">Address</h5>
+          {/* Info Cards Grid */}
+          <div className="grid grid-cols-2 gap-3 mb-8">
+            {/* Address */}
+            <div className="bg-white rounded-xl p-4 flex items-start gap-3 shadow-sm">
+              <div className="text-lg mt-0.5">📍</div>
+              <div>
+                <h5 className="text-deep-green text-[0.82rem] mb-1 font-bold">Address</h5>
                 <p className="text-text-mid text-[0.75rem] leading-[1.4]">Department of Archaeology, Colombo, Sri Lanka</p>
               </div>
             </div>
-
-            <div className="bg-white rounded-xl p-5 flex items-start gap-[15px] shadow-[0_4px_15px_rgba(0,0,0,0.03)]">
-              <div className="w-8 h-8 rounded-full bg-gold/10 text-deep-green flex items-center justify-center shrink-0 text-[1rem]">📞</div>
-              <div className="info-card-content">
-                <h5 className="text-deep-green text-[0.85rem] mb-1 font-bold">Phone</h5>
+            {/* Phone */}
+            <div className="bg-white rounded-xl p-4 flex items-start gap-3 shadow-sm">
+              <div className="text-lg mt-0.5">📞</div>
+              <div>
+                <h5 className="text-deep-green text-[0.82rem] mb-1 font-bold">Phone</h5>
                 <p className="text-text-mid text-[0.75rem] leading-[1.4]">+94 11 269 2816<br />+94 11 269 2817</p>
               </div>
             </div>
-
-            <div className="bg-white rounded-xl p-5 flex items-start gap-[15px] shadow-[0_4px_15px_rgba(0,0,0,0.03)]">
-              <div className="w-8 h-8 rounded-full bg-gold/10 text-deep-green flex items-center justify-center shrink-0 text-[1rem]">✉️</div>
-              <div className="info-card-content">
-                <h5 className="text-deep-green text-[0.85rem] mb-1 font-bold">Email</h5>
+            {/* Email */}
+            <div className="bg-white rounded-xl p-4 flex items-start gap-3 shadow-sm">
+              <div className="text-lg mt-0.5">✉️</div>
+              <div>
+                <h5 className="text-deep-green text-[0.82rem] mb-1 font-bold">Email</h5>
                 <p className="text-text-mid text-[0.75rem] leading-[1.4]">info@archaeology.gov.lk</p>
               </div>
             </div>
-
-            <div className="bg-white rounded-xl p-5 flex items-start gap-[15px] shadow-[0_4px_15px_rgba(0,0,0,0.03)]">
-              <div className="w-8 h-8 rounded-full bg-gold/10 text-deep-green flex items-center justify-center shrink-0 text-[1rem]">🕒</div>
-              <div className="info-card-content">
-                <h5 className="text-deep-green text-[0.85rem] mb-1 font-bold">Office Hours</h5>
-                <p className="text-text-mid text-[0.75rem] leading-[1.4]">Monday - Friday<br />8:30 AM - 4:15 PM</p>
+            {/* Office Hours */}
+            <div className="bg-white rounded-xl p-4 flex items-start gap-3 shadow-sm">
+              <div className="text-lg mt-0.5">🕒</div>
+              <div>
+                <h5 className="text-deep-green text-[0.82rem] mb-1 font-bold">Office Hours</h5>
+                <p className="text-text-mid text-[0.75rem] leading-[1.4]">Monday – Friday<br />8:30 AM – 4:15 PM</p>
               </div>
             </div>
           </div>
 
-          <div className="partners-wrap">
-            <h3 className="font-serif text-[1.5rem] text-text-dark mb-5">Our Partners</h3>
-            <div className="flex items-center gap-[30px] flex-wrap">
-              <img src="/images/archelogicaldeptlogo.png" className="h-[60px] object-contain transition-all duration-300 hover:opacity-100" alt="Department of Archaeology" />
-              <img src="/images/image 2.png" className="h-[60px] object-contain transition-all duration-300 hover:opacity-100" alt="Royal College Colombo" />
-              <img src="/images/WhatsApp_Image_2025-02-23_at_22.38.43-removebg-preview 2.png" className="h-[60px] object-contain transition-all duration-300 hover:opacity-100" alt="HejCeylon" />
+          {/* Our Partners */}
+          <div>
+            <h3 className="font-serif text-[1.3rem] text-text-dark mb-5 font-bold">Our Partners</h3>
+            <div className="flex items-center gap-6 flex-wrap">
+              <img src="/images/archelogicaldeptlogo.png" className="h-[70px] w-[70px] object-contain" alt="Department of Archaeology" />
+              <img src="/images/image 2.png" className="h-[70px] w-[70px] object-contain" alt="Royal College Colombo" />
+              <img src="/images/WhatsApp_Image_2025-02-23_at_22.38.43-removebg-preview 2.png" className="h-[70px] w-[100px] object-contain" alt="HejCeylon" />
             </div>
           </div>
         </div>
 
         {/* Right Side - Form */}
-        <div className="bg-white rounded-[20px] p-10 shadow-[0_10px_40px_rgba(0,0,0,0.05)]">
-          <h3 className="font-serif text-[1.8rem] text-text-dark mb-1.5">Send Us A Message</h3>
-          <p className="text-[0.85rem] text-text-muted mb-[30px]">We'll get back to you as soon as possible.</p>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <div className="mb-5">
-              <label className="block text-[0.82rem] font-semibold text-text-dark mb-2">Full Name</label>
-              <input type="text" placeholder="Enter your Name" className="w-full px-4 py-3 border border-[#e5e5e5] rounded-lg text-[0.9rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green" />
+        <div className="bg-white rounded-[16px] p-10 shadow-[0_8px_40px_rgba(0,0,0,0.06)]">
+          <h3 className="font-serif text-[1.8rem] font-bold text-text-dark mb-1">Send Us A Message</h3>
+          <p className="text-[0.83rem] text-text-muted mb-7">We'll get back to you as soon as possible.</p>
+          
+          <form onSubmit={(e) => e.preventDefault()} className="flex flex-col gap-5">
+            <div>
+              <label className="block text-[0.8rem] font-semibold text-text-dark mb-1.5">Full Name</label>
+              <input type="text" placeholder="Enter your Full Name" className="w-full px-4 py-2.5 border border-[#e0e0e0] rounded-md text-[0.88rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green" />
             </div>
             
-            <div className="mb-5">
-              <label className="block text-[0.82rem] font-semibold text-text-dark mb-2">Email Address</label>
-              <input type="email" placeholder="Enter Email" className="w-full px-4 py-3 border border-[#e5e5e5] rounded-lg text-[0.9rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green" />
+            <div>
+              <label className="block text-[0.8rem] font-semibold text-text-dark mb-1.5">Email Address</label>
+              <input type="email" placeholder="Enter Email" className="w-full px-4 py-2.5 border border-[#e0e0e0] rounded-md text-[0.88rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green" />
             </div>
 
-            <div className="mb-5">
-              <label className="block text-[0.82rem] font-semibold text-text-dark mb-2">Phone Number</label>
-              <input type="text" placeholder="Enter Your Phone Number" className="w-full px-4 py-3 border border-[#e5e5e5] rounded-lg text-[0.9rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green" />
+            <div>
+              <label className="block text-[0.8rem] font-semibold text-text-dark mb-1.5">Phone Number</label>
+              <input type="text" placeholder="Enter Your Phone Number" className="w-full px-4 py-2.5 border border-[#e0e0e0] rounded-md text-[0.88rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green" />
             </div>
 
-            <div className="mb-5">
-              <label className="block text-[0.82rem] font-semibold text-text-dark mb-2">Message</label>
-              <textarea placeholder="Enter Your Message" className="w-full px-4 py-3 border border-[#e5e5e5] rounded-lg text-[0.9rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green resize-y h-[120px]"></textarea>
+            <div>
+              <label className="block text-[0.8rem] font-semibold text-text-dark mb-1.5">Message</label>
+              <textarea placeholder="Enter Your Message" className="w-full px-4 py-2.5 border border-[#e0e0e0] rounded-md text-[0.88rem] font-sans text-text-dark bg-white outline-none transition-colors duration-200 focus:border-deep-green resize-y h-[110px]"></textarea>
             </div>
 
-            <button type="submit" className="w-full bg-deep-green text-white border-none p-3.5 rounded-lg text-[0.95rem] font-semibold cursor-pointer font-sans transition-all duration-250 flex items-center justify-center gap-2.5 hover:bg-gold hover:text-deep-green">
-              <i>✈</i> Send Your Message
+            <button type="submit" className="w-full bg-deep-green text-white border-none py-3 rounded-md text-[0.92rem] font-semibold cursor-pointer font-sans transition-all duration-200 flex items-center justify-center gap-2 hover:bg-gold hover:text-deep-green">
+              ✈ Send Your Message
             </button>
           </form>
         </div>
